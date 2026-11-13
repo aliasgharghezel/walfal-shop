@@ -1,22 +1,25 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Walfal Store',
-  description: 'فروشگاه آنلاین مشابه آمازون.اای',
-}
+  title: "Walfal | Online Shopping",
+  description:
+    "Shop electronics, fashion, home essentials, beauty, and more on Walfal with great deals and fast delivery.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="fa" dir="rtl">
-      <body className={inter.className}>{children}</body>
+    <html lang="en">
+      <body className={`${inter.className} bg-gray-100 text-gray-900`}>
+        {children}
+      </body>
     </html>
-  )
+  );
 }
